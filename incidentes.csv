@@ -1,0 +1,11 @@
+fecha,tipo,descripcion,estado
+2026-07-19 20:25:24,Servicio,La API funciona correctamente.,Normal
+2026-07-19 20:25:24,Latencia,El tiempo de respuesta fue mayor a 500 ms.,Incidente
+2026-07-19 20:25:24,Latencia,La latencia volvió a valores normales.,Recuperado
+2026-07-19 20:25:24,Modelo,"Disminuyó el desempeño del modelo (accuracy, precision, recall y F1).",Incidente
+2026-07-19 20:25:24,Modelo,El modelo fue reentrenado y recuperó su desempeño.,Recuperado
+2026-07-19 21:27:31,Servicio,La API funciona correctamente.,Normal
+2026-07-19 21:27:31,Latencia,El tiempo de respuesta fue mayor a 500 ms.,Incidente
+2026-07-19 21:27:31,Latencia,La latencia volvió a valores normales.,Recuperado
+2026-07-19 21:27:31,Modelo,"Disminuyó el desempeño del modelo (accuracy, precision, recall y F1).",Incidente
+2026-07-19 21:27:31,Modelo,El modelo fue reentrenado y recuperó su desempeño.,Recuperado

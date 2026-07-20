@@ -1,0 +1,3 @@
+fecha,latencia_ms,prediccion,resultado,probabilidad_ataque,estado
+2026-07-19 20:20:46,193.92,0,Tráfico benigno,0.1716,Correcta
+2026-07-19 20:21:18,1097.05,0,Tráfico benigno,0.1716,Correcta

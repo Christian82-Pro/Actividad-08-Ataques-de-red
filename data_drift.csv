@@ -1,0 +1,4 @@
+fecha,variable,valor_anterior,valor_actual,estado
+2026-07-19 20:56:41,Flow Duration,850,2600,Drift Detectado
+2026-07-19 20:56:41,Total Fwd Packets,12,55,Drift Detectado
+2026-07-19 20:56:41,Modelo,Random Forest,Reentrenado,Drift Corregido
