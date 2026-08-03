@@ -33,7 +33,7 @@ Desarrollar una solución capaz de clasificar automáticamente el tráfico de re
 
 ## Estructura del proyecto
 
-```text
+
 Actividad-08-Ataques-de-red/
 │
 ├── .github/
@@ -50,7 +50,7 @@ Actividad-08-Ataques-de-red/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
-```
+
 
 ---
 
@@ -120,7 +120,7 @@ Durante el desarrollo se logró:
 1. Clonar el repositorio.
 
 
-git clone https://github.com/TU_USUARIO/Actividad-08-Ataques-de-red.git
+git clone https://github.com/TU_USUARIO/FASE-III-Ataques-de-red.git
 
 
 2. Instalar dependencias.
