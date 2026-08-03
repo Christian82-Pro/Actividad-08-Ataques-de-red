@@ -1,85 +1,147 @@
-# Actividad 08 - Ataques de Red
+# FASE III
+
+# Sistema Inteligente para la Detección de Ataques de Red
 
 ## Descripción
 
-Este proyecto implementa una estrategia básica de observabilidad para un modelo de Machine Learning desplegado mediante una API desarrollada con FastAPI. Se registran métricas, alertas e incidentes, además de utilizar MLflow para el monitoreo del modelo y dashboards para visualizar la información.
+Este proyecto consiste en el desarrollo de una solución de inteligencia artificial para detectar posibles ataques de red utilizando Machine Learning. Se entrenó un modelo Random Forest y posteriormente se publicó mediante una API desarrollada con FastAPI.
+
+Además del modelo, se incorporaron prácticas de MLOps y GitOps, incluyendo monitoreo, automatización del pipeline, control de versiones y una propuesta de despliegue en la nube.
+
+---
+
+## Objetivo
+
+Desarrollar una solución capaz de clasificar automáticamente el tráfico de red como benigno o posible ataque, integrando herramientas que permitan facilitar el despliegue, monitoreo y mantenimiento del modelo.
+
+---
 
 ## Tecnologías utilizadas
 
 - Python
-- FastAPI
-- Scikit-learn
 - Pandas
-- Matplotlib
-- MLflow
+- Scikit-learn
+- Random Forest
+- FastAPI
 - Docker
+- MLflow
+- GitHub
+- GitHub Actions
+- AWS (propuesta de despliegue)
+
+---
 
 ## Estructura del proyecto
 
-```
-Actividad 08 Ataques de red/
+```text
+Actividad-08-Ataques-de-red/
 │
-├── main.py
+├── .github/
+│   └── workflows/
+│       └── pipeline.yml
+│
 ├── modelo_red.pkl
 ├── columnas.pkl
-├── requirements.txt
+├── main.py
 ├── dashboard.py
-├── data_drift.py
 ├── mlflow_modelo.py
+├── data_drift.py
 ├── simular_incidentes.py
-├── metricas_api.csv
-├── alertas_api.csv
-├── incidentes.csv
-├── data_drift.csv
-└── dashboards/
+├── Dockerfile
+├── requirements.txt
+└── README.md
 ```
+
+---
 
 ## Funcionalidades
 
-- API para predicción de ataques de red.
-- Registro automático de métricas.
-- Generación de alertas por alta latencia.
+- Entrenamiento del modelo Random Forest.
+- API REST desarrollada con FastAPI.
+- Contenerización mediante Docker.
+- Registro de métricas con MLflow.
+- Monitoreo de latencia y alertas.
 - Simulación de incidentes.
 - Simulación de Data Drift.
-- Monitoreo del modelo mediante MLflow.
-- Generación de dashboards con métricas e incidentes.
+- Pipeline automatizado con GitHub Actions.
+- Control de versiones mediante GitHub.
+- Propuesta de despliegue en AWS.
 
-## Ejecución
+---
 
-Instalar las dependencias:
+## Pipeline MLOps
+
+El proyecto incluye un pipeline automatizado con GitHub Actions que realiza las siguientes tareas:
+
+- Instalación de dependencias.
+- Validación de archivos del proyecto.
+- Verificación del modelo.
+- Validación de la API.
+- Construcción automática de la imagen Docker.
+- Simulación del despliegue continuo.
+
+---
+
+## Monitoreo
+
+Para supervisar el comportamiento del modelo se implementaron:
+
+- MLflow para registrar métricas.
+- Registro de alertas.
+- Registro de incidentes.
+- Detección de Data Drift.
+- Dashboard para visualizar la información.
+
+---
+
+## Arquitectura
+
+La solución está compuesta por:
+
+Usuario → FastAPI → Modelo Random Forest → MLflow → Dashboard y registros de métricas.
+
+---
+
+## Resultados
+
+Durante el desarrollo se logró:
+
+- Entrenar un modelo funcional.
+- Publicar el modelo mediante FastAPI.
+- Automatizar el pipeline con GitHub Actions.
+- Registrar métricas utilizando MLflow.
+- Implementar monitoreo e incidentes simulados.
+- Diseñar una propuesta de despliegue escalable en AWS.
+
+---
+
+## Cómo ejecutar el proyecto
+
+1. Clonar el repositorio.
+
+```bash
+git clone https://github.com/TU_USUARIO/Actividad-08-Ataques-de-red.git
+```
+
+2. Instalar dependencias.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Ejecutar la API:
+3. Ejecutar la API.
 
 ```bash
 uvicorn main:app --reload
 ```
 
-Iniciar MLflow:
+4. Abrir en el navegador.
 
-```bash
-mlflow ui
+```
+http://127.0.0.1:8000/docs
 ```
 
-Generar dashboards:
-
-```bash
-python dashboard.py
-```
-
-Simular incidentes:
-
-```bash
-python simular_incidentes.py
-```
-
-Simular Data Drift:
-
-```bash
-python data_drift.py
+---
 ```
 ## Autor
 Christian Oswaldo Ortiz Rodríguez
