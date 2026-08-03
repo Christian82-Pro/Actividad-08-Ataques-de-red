@@ -33,8 +33,8 @@ Desarrollar una solución capaz de clasificar automáticamente el tráfico de re
 
 ## Estructura del proyecto
 
-
-Actividad-08-Ataques-de-red/
+---
+FASE-III-Ataques-de-red/
 │
 ├── .github/
 │   └── workflows/
@@ -50,7 +50,7 @@ Actividad-08-Ataques-de-red/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
-
+---
 
 ---
 
