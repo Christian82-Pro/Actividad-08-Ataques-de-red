@@ -119,33 +119,33 @@ Durante el desarrollo se logró:
 
 1. Clonar el repositorio.
 
-```bash
+
 git clone https://github.com/TU_USUARIO/Actividad-08-Ataques-de-red.git
-```
+
 
 2. Instalar dependencias.
 
-```bash
+
 pip install -r requirements.txt
-```
+
 
 3. Ejecutar la API.
 
-```bash
+
 uvicorn main:app --reload
-```
+
 
 4. Abrir en el navegador.
 
-```
+
 http://127.0.0.1:8000/docs
-```
+
 
 ---
 ```
 ## Autor
 Christian Oswaldo Ortiz Rodríguez
 Gestión de proyectos de inteligencia artificial
-Proyecto Fase II
+Proyecto Fase III
 Luis Ariel Vázquez Piña
-05 / 07 / 2026
+02 / 08 / 2026
