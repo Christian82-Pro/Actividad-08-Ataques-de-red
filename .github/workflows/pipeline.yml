@@ -1,0 +1,68 @@
+name: Pipeline MLOps - Ataques de Red
+
+# Ejecutar cuando exista un cambio en GitHub
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  validar:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    # Descargar el repositorio
+    - name: Descargar repositorio
+      uses: actions/checkout@v4
+
+    # Instalar Python
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    # Actualizar pip
+    - name: Actualizar pip
+      run: python -m pip install --upgrade pip
+
+    # Instalar dependencias
+    - name: Instalar librerías
+      run: pip install -r requirements.txt
+
+    # Verificar archivos principales
+    - name: Verificar archivos
+      run: |
+        test -f modelo_red.pkl
+        test -f columnas.pkl
+        test -f main.py
+        test -f Dockerfile
+
+    # Verificar que el modelo pueda abrirse
+    - name: Validar modelo
+      run: |
+        python -c "import joblib; joblib.load('modelo_red.pkl'); print('Modelo correcto')"
+
+    # Verificar columnas
+    - name: Validar columnas
+      run: |
+        python -c "import joblib; c=joblib.load('columnas.pkl'); print('Columnas:',len(c))"
+
+    # Verificar que FastAPI cargue
+    - name: Validar API
+      run: |
+        python -c "from main import app; print('API cargada correctamente')"
+
+    # Construir Docker
+    - name: Construir Docker
+      run: docker build -t ataques-red .
+
+    # Simulación de despliegue
+    - name: Despliegue simulado
+      run: echo "Pipeline ejecutado correctamente."
